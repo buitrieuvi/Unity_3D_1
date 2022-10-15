@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: f7583c5a8a56a1f4f88c411735752696
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Milky Coffee
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d104eedcbb5831e4e81a224e65a3070c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
