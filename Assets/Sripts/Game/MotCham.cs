@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class MotCham : MonoBehaviour
 {
-    //public static bool it = false;
+    public GameObject cc;
+    public static bool it = false;
+
+    void OnTriggerEnter()
+    {
+        Destroy(gameObject);
+        //if (it == false)
+        //{
+        //    StartCoroutine(ExampleCoroutine());
+        //}
+    }
 
     //void OnCollisionEnter(Collider col)
     //{
@@ -23,17 +33,15 @@ public class MotCham : MonoBehaviour
     //    {
     //        StartCoroutine(ExampleCoroutine());
     //    }
-            
-        
-    //}
-
-    //IEnumerator ExampleCoroutine()
-    //{
-    //    it = true;
-    //    yield return new WaitForSeconds(1);
-    //    Destroy(gameObject);
-    //    it = false;
 
 
     //}
+
+    IEnumerator ExampleCoroutine()
+    {
+        it = true;
+        Destroy(gameObject);
+        yield return new WaitForSeconds(1);
+        it = false;
+    }
 }
