@@ -8,12 +8,14 @@ public class GameCtrl : MonoBehaviour
     public static GameCtrl Ins;
     private int diem;
     [SerializeField] private int thoigian = 120;
-    
+    [SerializeField] private GameObject maincam;
+    [SerializeField] private GameObject subcam;
     private int solanchet;
     private int diemcaonhat;
     private float vol =0.5f;
     private bool thua = false;
     private bool thang = false;
+
 
 
 
@@ -34,6 +36,8 @@ public class GameCtrl : MonoBehaviour
     public int Solanchet { get => solanchet; set => solanchet = value; }
     public int Diemcaonhat { get => diemcaonhat; set => diemcaonhat = value; }
     public float Vol { get => vol; set => vol = value; }
+    public GameObject Maincam { get => maincam; set => maincam = value; }
+    public GameObject Subcam { get => subcam; set => subcam = value; }
 
     public void Awake()
     {
@@ -41,11 +45,8 @@ public class GameCtrl : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
         instance = this;
         //DontDestroyOnLoad(this.gameObject);
-
-
     }
 
     public void ChoiLai()
@@ -74,6 +75,8 @@ public class GameCtrl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        Scam(false);
         Diem = PlayerPrefs.GetInt("Level");
         Thoigian = thoigian;
         Solanchet = 0;
@@ -86,6 +89,11 @@ public class GameCtrl : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void Scam(bool sc) 
+    {
+        subcam.GetComponent<Camera>().enabled = sc;
     }
 
 }

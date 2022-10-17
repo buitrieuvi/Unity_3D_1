@@ -6,23 +6,33 @@ public class keep : MonoBehaviour
 {
     public GameObject player;
     public GameObject flat;
-    public GameObject MainCam;
     public Animator Boat;
+    public Animator House;
 
-     void Start()
+    private bool mc, sc;
+
+    void Start()
     {
-       
+        
     }
     void OnTriggerEnter()
     {
-        player.transform.parent = flat.transform;
-        MainCam.GetComponent<Camera>().enabled = false;
-        Boat.SetBool("bl",true);
         
+        player.transform.parent = flat.transform;
+        GameCtrl.instance.Scam(true);
+        Boat.SetBool("bl",true);
+        House.SetBool("bl", true);
+        GameAudio.instance.Play_house();
+
     }
     void OnTriggerExit()
     {
         player.transform.parent = null;
-        MainCam.GetComponent<Camera>().enabled = true;
+        GameCtrl.instance.Scam(false);
+
     }
+
+   
+
+
 }

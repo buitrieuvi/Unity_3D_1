@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class SAD : MonoBehaviour
 {
-    public GameObject MainCam;
+    public GameObject house;
 
+    
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.L))
-            MainCam.GetComponent<Camera>().enabled = true;
+        //if(Input.GetKeyDown(KeyCode.L))
+        //    MainCam.GetComponent<Camera>().enabled = true;
     }
     void OnTriggerEnter()
     {
-        MainCam.GetComponent<Camera>().enabled = true;
+        //MainCam.GetComponent<Camera>().enabled = true;
+        Destroy(gameObject);
     }
 
     

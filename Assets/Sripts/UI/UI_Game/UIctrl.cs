@@ -7,18 +7,18 @@ using UnityEngine.SceneManagement;
 
 public class UIctrl : MonoBehaviour
 {
-    public GameObject Panel_gameover, Panel_menu, Panel_win, Panel_stop;
-    public GameObject time;
-    public GameObject time_1;
-    public GameObject score, score_1;
-    public GameObject T_time;
-    public GameObject T_time_1;
-    public GameObject T_score;
-    public GameObject T_score_1;
-    public GameObject T_total;
-    public GameObject T_total_1;
-    public GameObject best;
-    public GameObject best_1;
+    [SerializeField]private GameObject Panel_gameover, Panel_menu, Panel_win, Panel_stop;
+    [SerializeField] private GameObject time;
+    [SerializeField] private GameObject time_1;
+    [SerializeField] private GameObject score, score_1;
+    [SerializeField] private GameObject T_time;
+    [SerializeField] private GameObject T_time_1;
+    [SerializeField] private GameObject T_score;
+    [SerializeField] private GameObject T_score_1;
+    [SerializeField] private GameObject T_total;
+    [SerializeField] private GameObject T_total_1;
+    [SerializeField] private GameObject best;
+    [SerializeField] private GameObject best_1;
     private bool m_Stop = false;
 
     public static bool isTackingTime = false;

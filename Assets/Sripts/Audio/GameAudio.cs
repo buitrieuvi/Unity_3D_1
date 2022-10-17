@@ -9,6 +9,8 @@ public class GameAudio: MonoBehaviour
     [SerializeField]private AudioClip ate;
     [SerializeField]private AudioClip die;
     [SerializeField]private AudioClip win;
+    [SerializeField]private AudioClip house;
+    [SerializeField]private AudioClip house2;
     [SerializeField]private AudioSource aus;
     [SerializeField]private AudioSource aus_game;
 
@@ -44,6 +46,7 @@ public class GameAudio: MonoBehaviour
     {
         sroll = FindObjectOfType<Scrollbar>();
         sroll.value = PlayerPrefs.GetFloat("Vol_BG");
+        
     }
 
     void Update()
@@ -63,6 +66,13 @@ public class GameAudio: MonoBehaviour
     public void Play_win()
     {
         Aus_game.PlayOneShot(Win);
+    }
+    public void Play_house()
+    {
+
+        Aus_game.PlayOneShot(house);
+        Aus_game.PlayOneShot(house2);
+
     }
 
 

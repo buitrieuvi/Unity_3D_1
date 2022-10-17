@@ -11,7 +11,5 @@ public class die : MonoBehaviour
         GameAudio.instance.Play_die();
         GameAudio.instance.Aus.mute = true;
 
-
-
     }
 }
