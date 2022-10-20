@@ -49,6 +49,8 @@ MonoBehaviour:
   ate: {fileID: 8300000, guid: bbf4d5e5bf35bcd4e8e432c66eba0982, type: 3}
   die: {fileID: 8300000, guid: a488334d2f2dd684bb27594ee0672735, type: 3}
   win: {fileID: 8300000, guid: 0b43695410ef59e4ba7ad6bc1111072c, type: 3}
+  house: {fileID: 8300000, guid: 33af9cddc42e7d648b81a520e7424107, type: 3}
+  house2: {fileID: 8300000, guid: d1f86a1eec532b443b2dce720483fdc6, type: 3}
   aus: {fileID: 5333264397685134077}
   aus_game: {fileID: 5333264396549602462}
 --- !u!1 &5333264396549602460

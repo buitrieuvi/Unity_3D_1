@@ -14,9 +14,6 @@ public class GameAudio: MonoBehaviour
     [SerializeField]private AudioSource aus;
     [SerializeField]private AudioSource aus_game;
 
-    public Scrollbar sroll;
-    
-
     public static GameAudio instance = null;
     public static GameAudio Instance
     {
@@ -44,15 +41,13 @@ public class GameAudio: MonoBehaviour
     }
     void Start()
     {
-        sroll = FindObjectOfType<Scrollbar>();
-        sroll.value = PlayerPrefs.GetFloat("Vol_BG");
-        
+        aus.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("Vol_BG");
+        aus_game.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("Vol_BG");
     }
 
     void Update()
     {
-        Aus.volume = volume();
-        Aus_game.volume = volume();
+        
     }
 
     public void Play_eat() 
@@ -73,21 +68,6 @@ public class GameAudio: MonoBehaviour
         Aus_game.PlayOneShot(house);
         Aus_game.PlayOneShot(house2);
 
-    }
-
-
-    public float volume()
-    {
-
-        float kq = sroll.value;
-        if (kq < 0.5)
-            sroll.image.color = Color.green;
-        else if(kq > 0.5)
-            sroll.image.color = Color.red;
-        else
-            sroll.image.color = Color.white;
-        PlayerPrefs.SetFloat("Vol_BG", kq);
-        return kq;
     }
 
 }

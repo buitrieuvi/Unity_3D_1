@@ -19,16 +19,17 @@ public class keep : MonoBehaviour
     {
         
         player.transform.parent = flat.transform;
-        GameCtrl.instance.Scam(true);
-        Boat.SetBool("bl",true);
+        GameCtrl.instance.cam(true,false,false); 
+        Boat.SetBool("bl",true); 
         House.SetBool("bl", true);
-        GameAudio.instance.Play_house();
+        //GameAudio.instance.Play_house();
 
     }
     void OnTriggerExit()
     {
         player.transform.parent = null;
-        GameCtrl.instance.Scam(false);
+        Destroy(gameObject);
+        
 
     }
 

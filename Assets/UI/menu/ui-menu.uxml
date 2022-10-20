@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/menu/ui-menu.uss?fileID=7433441132597879392&amp;guid=d41ef8620d4662b448c89559f047a80c&amp;type=3#ui-menu" />
+    <ui:VisualElement name="root-menu" class="root" style="justify-content: space-around; align-items: center; background-image: url(&apos;project://database/Assets/Assets%20MOOD%20WARE/_MW%20Skybox/MAPS/17_FM.front.tif?fileID=2800000&amp;guid=5e5f48d38ff8c9640b6650c885c1c8fc&amp;type=3#17_FM.front&apos;); display: flex; overflow: visible; visibility: visible; opacity: 1;">
+        <ui:VisualElement name="game-panel" class="btn-panel" style="width: 600px; height: 700px; justify-content: flex-end; border-left-color: rgb(160, 47, 255); border-right-color: rgb(160, 47, 255); border-top-color: rgb(160, 47, 255); border-bottom-color: rgb(160, 47, 255); border-left-width: 11px; border-right-width: 11px; border-top-width: 11px; border-bottom-width: 11px; border-top-left-radius: 50px; border-bottom-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; align-items: center; visibility: visible; flex-direction: column; top: 30px;">
+            <ui:VisualElement name="btn-panel">
+                <ui:Button text="Start game" display-tooltip-when-elided="true" name="start" class="unity-button s" />
+                <ui:Button text="How to play" display-tooltip-when-elided="true" name="howtoplay" class="unity-button h" />
+                <ui:Button text="About us" display-tooltip-when-elided="true" name="about" class="unity-button a" />
+                <ui:Button text="Quit" display-tooltip-when-elided="true" name="quit" class="unity-button q" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

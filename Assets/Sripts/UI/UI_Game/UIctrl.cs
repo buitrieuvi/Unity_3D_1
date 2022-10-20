@@ -32,6 +32,10 @@ public class UIctrl : MonoBehaviour
             return instance;
         }
     }
+
+    public GameObject Best { get => best; set => best = value; }
+    public GameObject Best_1 { get => best_1; set => best_1 = value; }
+
     public void Awake()
     {
         if (instance != null && instance != this)
@@ -48,8 +52,8 @@ public class UIctrl : MonoBehaviour
     {
         
         isTackingTime = false;
-        best.GetComponent<Text>().text = " Best: " + PlayerPrefs.GetInt("Best").ToString();
-        best_1.GetComponent<Text>().text = " Best: " + PlayerPrefs.GetInt("Best").ToString();
+        Best.GetComponent<Text>().text = " Best: " + GameCtrl.instance.best().ToString();
+        Best_1.GetComponent<Text>().text = " Best: " + GameCtrl.instance.best().ToString();
     }
 
     // Update is called once per frame
@@ -114,6 +118,11 @@ public class UIctrl : MonoBehaviour
         score.GetComponent<Text>().text = " Score: " + GameCtrl.instance.Diem;
         score_1.GetComponent<Text>().text = " Score: " + GameCtrl.instance.Diem;
     }
+    public void restbest()
+    {
+        Best.GetComponent<Text>().text = " Best: "  + GameCtrl.instance.Diemcaonhat;
+        Best_1.GetComponent<Text>().text = " Best: "  + GameCtrl.instance.Diemcaonhat;
+    }
 
     private void P_thua(bool s)
     {
@@ -141,46 +150,33 @@ public class UIctrl : MonoBehaviour
         SceneManager.LoadScene(0);
 
     }
-    public void LoadLevel(int i)
-    {
-        SceneManager.LoadScene(i);
-     
-    }
 
-    public void replay()
-    {
-        PlayerPrefs.SetInt("Level", 0);
-        SceneManager.LoadScene(1);
-        best.GetComponent<Text>().text = " Best: " + PlayerPrefs.GetInt("Best").ToString();
-        best_1.GetComponent<Text>().text = " Best: " + PlayerPrefs.GetInt("Best").ToString();
-    }
+    //int i, j, k = 0;
+    //IEnumerator uiCount()
+    //{
+    //    isTackingTime = true;
+    //    if (i <= GameCtrl.instance.Thoigian)
+    //    {
+    //        T_time.GetComponent<Text>().text = "Time: " + i;
+    //        T_time_1.GetComponent<Text>().text = "Time: " + i;
+    //    }
+    //    if (j <= GameCtrl.instance.Diem)
+    //    {
+    //        T_score.GetComponent<Text>().text = "Score: " + j;
+    //        T_score_1.GetComponent<Text>().text = "Score: " + j;
+    //    }
+    //    if(k<= GameCtrl.instance.TongDiem())
+    //    {
+    //        T_total.GetComponent<Text>().text = "Total Score: " + k;
+    //        T_total_1.GetComponent<Text>().text = "Total Score: " + k;
+    //    }
+    //    j++;
+    //    i++;
+    //    k++;
+    //    yield return new WaitForSeconds(0.00000000000000000000000000000000000000001f);
+    //    isTackingTime = false;
 
-        int i, j, k = 0;
-    IEnumerator uiCount()
-    {
-        isTackingTime = true;
-        if (i <= GameCtrl.instance.Thoigian)
-        {
-            T_time.GetComponent<Text>().text = "Time: " + i;
-            T_time_1.GetComponent<Text>().text = "Time: " + i;
-        }
-        if (j <= GameCtrl.instance.Diem)
-        {
-            T_score.GetComponent<Text>().text = "Score: " + j;
-            T_score_1.GetComponent<Text>().text = "Score: " + j;
-        }
-        if(k<= GameCtrl.instance.TongDiem())
-        {
-            T_total.GetComponent<Text>().text = "Total Score: " + k;
-            T_total_1.GetComponent<Text>().text = "Total Score: " + k;
-        }
-        j++;
-        i++;
-        k++;
-        yield return new WaitForSeconds(0.00000000000000000000000000000000000000001f);
-        isTackingTime = false;
-
-    }
+    //}
 
     private void endScore()
     {

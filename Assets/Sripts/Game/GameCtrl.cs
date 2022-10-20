@@ -1,24 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class GameCtrl : MonoBehaviour
 {
     public static GameCtrl Ins;
     private int diem;
-    [SerializeField] private int thoigian = 120;
+
+    [SerializeField] private int thoigian = 60;
     [SerializeField] private GameObject maincam;
     [SerializeField] private GameObject subcam;
-    private int solanchet;
-    private int diemcaonhat;
+    [SerializeField] private GameObject menucam;
+
+    private int solanchet = 0;
+    private int diemcaonhat = 0;
     private float vol =0.5f;
     private bool thua = false;
     private bool thang = false;
-
-
-
-
+    public Scrollbar sroll;
 
     public static GameCtrl instance = null;
     public static GameCtrl Instance
@@ -38,6 +39,7 @@ public class GameCtrl : MonoBehaviour
     public float Vol { get => vol; set => vol = value; }
     public GameObject Maincam { get => maincam; set => maincam = value; }
     public GameObject Subcam { get => subcam; set => subcam = value; }
+    public GameObject Menucam { get => menucam; set => menucam = value; }
 
     public void Awake()
     {
@@ -48,18 +50,24 @@ public class GameCtrl : MonoBehaviour
         instance = this;
         //DontDestroyOnLoad(this.gameObject);
     }
-
-    public void ChoiLai()
+    void Start()
     {
-
+        cam(false, false, true);
+        Diem = PlayerPrefs.GetInt("Level");
+        Diemcaonhat = best();
+        Time.timeScale = 1;
+        sroll.value = PlayerPrefs.GetFloat("Vol_BG");
     }
-
-    public int TongDiem()
+    void Update()
     {
-        return Diem*thoigian;
+        volume(sroll.value);
+        if (thua) 
+        {
+            solanchet++;
+            PlayerPrefs.SetInt("NumDie", Solanchet);
+        }
+           
     }
-
-
     public void Show()
     {
         Debug.Log("Điểm: " + Diem +
@@ -69,31 +77,47 @@ public class GameCtrl : MonoBehaviour
                     " \nThua: " + Thua +
                     " \nĐiểm cao nhất: " + Diemcaonhat
                   );
-
+    }
+    public int TongDiem()
+    {
+        return Diem*thoigian;
+    }
+    public int best()
+    {
+        return PlayerPrefs.GetInt("Best");
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-        Scam(false);
+    public void Replay(int i) 
+    {
         Diem = PlayerPrefs.GetInt("Level");
-        Thoigian = thoigian;
-        Solanchet = 0;
-        Thua = false;
-        Thang = false;
-        Time.timeScale = 1;
+        SceneManager.LoadScene(i);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void cam(bool subcam, bool menucam, bool maincam) 
     {
-
+        if(Maincam != null && Menucam != null && Subcam != null) 
+        {
+            Subcam.GetComponent<Camera>().enabled = subcam;
+            Menucam.GetComponent<Camera>().enabled = menucam;
+            Maincam.GetComponent<Camera>().enabled = maincam;
+        }
     }
 
-    public void Scam(bool sc) 
+
+    public void volume(float v)
     {
-        subcam.GetComponent<Camera>().enabled = sc;
+        if (v < 0.5)
+            sroll.image.color = Color.green;
+        else if (v > 0.5)
+            sroll.image.color = Color.red;
+        else
+            sroll.image.color = Color.white;
+        GameAudio.instance.Aus.volume = v;
+        GameAudio.instance.Aus_game.volume = v;
+        PlayerPrefs.SetFloat("Vol_BG", v);
+
     }
+
 
 }

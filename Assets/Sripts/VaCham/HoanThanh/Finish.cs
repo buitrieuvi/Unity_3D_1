@@ -10,6 +10,7 @@ public class Finish : MonoBehaviour
         GameAudio.instance.Play_win();
         GameAudio.instance.Aus.mute = true;
         PlayerPrefs.SetInt("Level", GameCtrl.instance.TongDiem());
-        PlayerPrefs.SetInt("Best", GameCtrl.instance.TongDiem());
+        if (PlayerPrefs.GetInt("Best") < PlayerPrefs.GetInt("Level"))
+            PlayerPrefs.SetInt("Best", PlayerPrefs.GetInt("Level"));
     }
 }

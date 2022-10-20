@@ -14,7 +14,7 @@ public class SAD : MonoBehaviour
     }
     void OnTriggerEnter()
     {
-        //MainCam.GetComponent<Camera>().enabled = true;
+        GameCtrl.instance.cam(false, false, true);
         Destroy(gameObject);
     }
 

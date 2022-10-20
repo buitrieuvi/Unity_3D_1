@@ -11,7 +11,6 @@ public class UiCtrl : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetInt("Level", 0);
         Panel_best.GetComponent<Text>().text =" Reset Best: "+ PlayerPrefs.GetInt("Best").ToString();
     }
     public void QuitApp()
@@ -20,10 +19,11 @@ public class UiCtrl : MonoBehaviour
         Application.Quit();
 
     }
-    public void Button(int i)
+    public void Run()
     {
+
+        GameCtrl.instance.cam(false,false,true);
         
-        SceneManager.LoadScene(i);
     }
     
 
