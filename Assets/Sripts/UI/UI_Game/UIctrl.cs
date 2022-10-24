@@ -187,7 +187,4 @@ public class UIctrl : MonoBehaviour
         T_total.GetComponent<Text>().text = "Total Score: " + GameCtrl.instance.TongDiem();
         T_total_1.GetComponent<Text>().text = "Total Score: " + GameCtrl.instance.TongDiem();
     }
-
-    
-
 }

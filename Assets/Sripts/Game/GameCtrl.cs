@@ -87,6 +87,10 @@ public class GameCtrl : MonoBehaviour
         return PlayerPrefs.GetInt("Best");
     }
 
+    public void resetbest()
+    {
+        PlayerPrefs.SetInt("Best",0);
+    }
 
     public void Replay(int i) 
     {
