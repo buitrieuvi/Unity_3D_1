@@ -12,5 +12,7 @@ public class Finish : MonoBehaviour
         PlayerPrefs.SetInt("Level", GameCtrl.instance.TongDiem());
         if (PlayerPrefs.GetInt("Best") < PlayerPrefs.GetInt("Level"))
             PlayerPrefs.SetInt("Best", PlayerPrefs.GetInt("Level"));
+
+       
     }
 }

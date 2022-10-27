@@ -14,6 +14,7 @@ public class GameCtrl : MonoBehaviour
     [SerializeField] private GameObject subcam;
     [SerializeField] private GameObject menucam;
 
+
     private int solanchet = 0;
     private int diemcaonhat = 0;
     private float vol =0.5f;
@@ -53,8 +54,9 @@ public class GameCtrl : MonoBehaviour
     void Start()
     {
         cam(false, false, true);
+        
+        Diemcaonhat = PlayerPrefs.GetInt("Best");
         Diem = PlayerPrefs.GetInt("Level");
-        Diemcaonhat = best();
         Time.timeScale = 1;
         sroll.value = PlayerPrefs.GetFloat("Vol_BG");
     }
@@ -82,10 +84,6 @@ public class GameCtrl : MonoBehaviour
     {
         return Diem*thoigian;
     }
-    public int best()
-    {
-        return PlayerPrefs.GetInt("Best");
-    }
 
     public void resetbest()
     {
@@ -94,7 +92,17 @@ public class GameCtrl : MonoBehaviour
 
     public void Replay(int i) 
     {
-        Diem = PlayerPrefs.GetInt("Level");
+        if(i ==1)
+            Diem = 0;
+        else
+            Diem = PlayerPrefs.GetInt("Level");
+
+        Time.timeScale = 1;
+        Thang = false;
+        Thua = false;
+
+        Thoigian = thoigian;
+
         SceneManager.LoadScene(i);
     }
 

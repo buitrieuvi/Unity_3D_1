@@ -12,7 +12,9 @@ public class UIMENU : MonoBehaviour
 
     void Start()
     {
-        //PlayerPrefs.SetInt("Level", 0);
+
+        PlayerPrefs.SetInt("Level", 0);
+        PlayerPrefs.SetInt("Diem", 0);
         var root = GetComponent<UIDocument>().rootVisualElement;
 
         s = root.Q<Button>("start");
@@ -36,6 +38,7 @@ public class UIMENU : MonoBehaviour
 
     private void startgamepress() 
     {
+        
         SceneManager.LoadScene(1);
     }
     private void quitgamepress()
