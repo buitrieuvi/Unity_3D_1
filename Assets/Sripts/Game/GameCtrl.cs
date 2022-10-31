@@ -14,22 +14,13 @@ public class GameCtrl : MonoBehaviour
     [SerializeField] private GameObject subcam;
     [SerializeField] private GameObject menucam;
 
-
     private int solanchet = 0;
     private int diemcaonhat = 0;
     private float vol =0.5f;
     private bool thua = false;
     private bool thang = false;
     public Scrollbar sroll;
-
     public static GameCtrl instance = null;
-    public static GameCtrl Instance
-    {
-        get
-        {
-            return instance;
-        }
-    }
 
     public int Diem { get => diem; set => diem = value; }
     public int Thoigian { get => thoigian; set => thoigian = value; }
@@ -42,6 +33,14 @@ public class GameCtrl : MonoBehaviour
     public GameObject Subcam { get => subcam; set => subcam = value; }
     public GameObject Menucam { get => menucam; set => menucam = value; }
 
+
+    public static GameCtrl Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
     public void Awake()
     {
         if (instance != null && instance != this)
@@ -54,7 +53,6 @@ public class GameCtrl : MonoBehaviour
     void Start()
     {
         cam(false, false, true);
-        
         Diemcaonhat = PlayerPrefs.GetInt("Best");
         Diem = PlayerPrefs.GetInt("Level");
         Time.timeScale = 1;
@@ -67,8 +65,7 @@ public class GameCtrl : MonoBehaviour
         {
             solanchet++;
             PlayerPrefs.SetInt("NumDie", Solanchet);
-        }
-           
+        }   
     }
     public void Show()
     {
@@ -84,12 +81,10 @@ public class GameCtrl : MonoBehaviour
     {
         return Diem*thoigian;
     }
-
     public void resetbest()
     {
         PlayerPrefs.SetInt("Best",0);
     }
-
     public void Replay(int i) 
     {
         if(i ==1)
@@ -100,12 +95,9 @@ public class GameCtrl : MonoBehaviour
         Time.timeScale = 1;
         Thang = false;
         Thua = false;
-
         Thoigian = thoigian;
-
         SceneManager.LoadScene(i);
     }
-
     public void cam(bool subcam, bool menucam, bool maincam) 
     {
         if(Maincam != null && Menucam != null && Subcam != null) 
@@ -115,8 +107,6 @@ public class GameCtrl : MonoBehaviour
             Maincam.GetComponent<Camera>().enabled = maincam;
         }
     }
-
-
     public void volume(float v)
     {
         if (v < 0.5)
@@ -128,7 +118,6 @@ public class GameCtrl : MonoBehaviour
         GameAudio.instance.Aus.volume = v;
         GameAudio.instance.Aus_game.volume = v;
         PlayerPrefs.SetFloat("Vol_BG", v);
-
     }
 
 

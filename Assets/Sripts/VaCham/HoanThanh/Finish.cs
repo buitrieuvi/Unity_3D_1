@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
@@ -13,6 +14,6 @@ public class Finish : MonoBehaviour
         if (PlayerPrefs.GetInt("Best") < PlayerPrefs.GetInt("Level"))
             PlayerPrefs.SetInt("Best", PlayerPrefs.GetInt("Level"));
 
-       
+        
     }
 }
