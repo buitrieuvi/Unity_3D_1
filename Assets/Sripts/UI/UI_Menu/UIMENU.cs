@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class UIMENU : MonoBehaviour
 {
-    public Button s,q,h,r;
+    public Button s,q,h,r,ab;
     public VisualElement g,l;
     //public Label t;
 
@@ -19,6 +19,7 @@ public class UIMENU : MonoBehaviour
 
         s = root.Q<Button>("start");
         q = root.Q<Button>("quit");
+        ab = root.Q<Button>("about");
         h = root.Q<Button>("howtoplay");
         r = root.Q<Button>("rs");
 
@@ -30,6 +31,7 @@ public class UIMENU : MonoBehaviour
         s.clicked += startgamepress;
         q.clicked += quitgamepress;
         h.clicked += howtoplaypress;
+        ab.clicked += aboutpress;
         r.text = "Reset Best: " + PlayerPrefs.GetInt("Best");
         r.clicked += rs;
 
@@ -44,6 +46,10 @@ public class UIMENU : MonoBehaviour
     private void quitgamepress()
     {
         Application.Quit();
+    }
+    private void aboutpress()
+    {
+        SceneManager.LoadScene(6);
     }
     private void howtoplaypress()
     {
