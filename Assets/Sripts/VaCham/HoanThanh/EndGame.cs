@@ -7,6 +7,5 @@ public class EndGame : MonoBehaviour
      void OnTriggerEnter()
     {
         SceneManager.LoadScene(6);
-
     }
 }

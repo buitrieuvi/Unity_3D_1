@@ -12,7 +12,7 @@ public class endGame : MonoBehaviour
     }
     IEnumerator n() 
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(10);
         SceneManager.LoadScene(0);
     }
 }

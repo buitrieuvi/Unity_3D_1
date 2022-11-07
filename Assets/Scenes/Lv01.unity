@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 256291271}
-  m_IndirectSpecularColor: {r: 0.27710006, g: 0.38492668, b: 0.53614175, a: 1}
+  m_IndirectSpecularColor: {r: 0.27715793, g: 0.38482636, b: 0.53612787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1366,6 +1366,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VND5000 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 2429347268461030572, guid: 3b88a04c62752ba4d84af485ad1dbe2d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f0b7891e1ccc3f040bcf07117e2191ec, type: 2}
     - target: {fileID: 2429347268461030574, guid: 3b88a04c62752ba4d84af485ad1dbe2d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2658,7 +2662,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6066613392213509863, guid: 94819022366917f49bc94b1b4159ef1c, type: 3}
+  - {fileID: 2100000, guid: 44634bbae0cc24746a6e3cde25389c52, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13461,6 +13465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle
       objectReference: {fileID: 0}
+    - target: {fileID: 5715182678079498783, guid: 94819022366917f49bc94b1b4159ef1c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ae24d4d71bbe174b8cd8b9a256eb977, type: 2}
     - target: {fileID: 8049454042850925305, guid: 94819022366917f49bc94b1b4159ef1c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.3

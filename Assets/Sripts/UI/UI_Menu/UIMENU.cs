@@ -6,6 +6,8 @@ using UnityEngine.UIElements;
 
 public class UIMENU : MonoBehaviour
 {
+
+    public GameObject htp;
     public Button s,q,h,r,ab;
     public VisualElement g,l;
     //public Label t;
@@ -30,7 +32,7 @@ public class UIMENU : MonoBehaviour
       
         s.clicked += startgamepress;
         q.clicked += quitgamepress;
-        h.clicked += howtoplaypress;
+        h.clicked += HtP;
         ab.clicked += aboutpress;
         r.text = "Reset Best: " + PlayerPrefs.GetInt("Best");
         r.clicked += rs;
@@ -67,8 +69,18 @@ public class UIMENU : MonoBehaviour
         PlayerPrefs.SetInt("Best", 0);
         r.text = "Reset Best: " + PlayerPrefs.GetInt("Best");
     }
-    
-
+    private void HtP()
+    {
+        htp.SetActive(true);
+        StartCoroutine(n());
+        
+    }
+   
+    IEnumerator n()
+    {
+        yield return new WaitForSeconds(3);
+        htp.SetActive(false);
+    }
 
 
 }
