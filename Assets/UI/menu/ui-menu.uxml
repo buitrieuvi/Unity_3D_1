@@ -1,13 +1,16 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/menu/ui-menu.uss?fileID=7433441132597879392&amp;guid=d41ef8620d4662b448c89559f047a80c&amp;type=3#ui-menu" />
+    <Style src="project://database/Assets/UI/menu/ui-menu.uss?fileID=7433441132597879392&amp;guid=ed828169e20d66f4fab84d5ff8d19ba9&amp;type=3#ui-menu" />
     <ui:VisualElement name="root-menu" class="root" style="justify-content: space-around; align-items: center; background-image: none; display: flex; overflow: visible; visibility: visible; opacity: 1;">
-        <ui:VisualElement name="game-panel" class="btn-panel" style="width: 812px; height: 850px; justify-content: flex-end; border-left-color: rgb(160, 47, 255); border-right-color: rgb(160, 47, 255); border-top-color: rgb(160, 47, 255); border-bottom-color: rgb(160, 47, 255); border-left-width: 11px; border-right-width: 11px; border-top-width: 11px; border-bottom-width: 11px; border-top-left-radius: 50px; border-bottom-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; align-items: center; visibility: visible; flex-direction: column; top: 0;">
-            <ui:VisualElement name="btn-panel">
-                <ui:Button text="Start game" display-tooltip-when-elided="true" name="start" class="unity-button s" />
-                <ui:Button text="How to play" display-tooltip-when-elided="true" name="howtoplay" class="unity-button h" />
-                <ui:Button text="About us" display-tooltip-when-elided="true" name="about" class="unity-button a" />
-                <ui:Button text="Quit" display-tooltip-when-elided="true" name="quit" class="unity-button q" />
-                <ui:Button text="Reset" display-tooltip-when-elided="true" name="rs" class="s" />
+        <ui:VisualElement name="game-panel" class="btn-panel" style="width: 1500px; height: 1000px; justify-content: flex-end; border-left-color: rgb(160, 47, 255); border-right-color: rgb(160, 47, 255); border-top-color: rgb(160, 47, 255); border-bottom-color: rgb(160, 47, 255); border-left-width: 11px; border-right-width: 11px; border-top-width: 11px; border-bottom-width: 11px; border-top-left-radius: 50px; border-bottom-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; align-items: center; visibility: visible; flex-direction: column; top: 0; background-image: resource(&apos;templatesPromo&apos;); overflow: visible;">
+            <ui:VisualElement name="btn-panel" style="justify-content: center; align-items: center; flex-direction: column;">
+                <ui:Button text="Start game" display-tooltip-when-elided="true" name="start" class="unity-button s" style="width: 500px; height: 100px;" />
+                <ui:Button text="How to play" display-tooltip-when-elided="true" name="howtoplay" class="unity-button h" style="margin-left: 8px; margin-right: 8px; margin-top: 8px; margin-bottom: 8px;" />
+                <ui:Button text="About us" display-tooltip-when-elided="true" name="about" class="unity-button a" style="margin-left: 8px; margin-right: 8px; margin-top: 8px; margin-bottom: 8px;" />
+                <ui:Button text="Quit" display-tooltip-when-elided="true" name="quit" class="unity-button q" style="margin-left: 8px; margin-right: 8px; margin-top: 8px; margin-bottom: 8px;" />
+                <ui:Button text="Reset" display-tooltip-when-elided="true" name="rs" class="s" style="width: 900px; height: 150px; -unity-text-align: middle-left; margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px;" />
+            </ui:VisualElement>
+            <ui:VisualElement>
+                <ui:Button display-tooltip-when-elided="true" name="ls" style="width: 150px; background-image: url(&apos;project://database/Packages/com.unity.collab-proxy/Editor/Collaborate/Assets/Icons/edited-file-dark@2x.png?fileID=2800000&amp;guid=cdf2b54d520524c418aed1dc00eec185&amp;type=3#edited-file-dark@2x&apos;); height: 150px;" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

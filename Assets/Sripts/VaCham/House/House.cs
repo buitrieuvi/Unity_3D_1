@@ -9,7 +9,7 @@ public class House : MonoBehaviour
     void OnTriggerEnter()
     {
         Destroy(h);
-        GameCtrl.instance.Subcam.GetComponent<Camera>().enabled = false;
+        CameraCtrl.Instance.Subcam.GetComponent<Camera>().enabled = false;
 
     }
 

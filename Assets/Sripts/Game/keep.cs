@@ -9,8 +9,6 @@ public class keep : MonoBehaviour
     public Animator Boat;
     public Animator House;
 
-    private bool mc, sc;
-
     void Start()
     {
         
@@ -19,7 +17,7 @@ public class keep : MonoBehaviour
     {
         
         player.transform.parent = flat.transform;
-        GameCtrl.instance.cam(true,false,false); 
+        CameraCtrl.Instance.cam(true,false,false); 
         Boat.SetBool("bl",true); 
         House.SetBool("bl", true);
         //GameAudio.instance.Play_house();
@@ -29,11 +27,6 @@ public class keep : MonoBehaviour
     {
         player.transform.parent = null;
         Destroy(gameObject);
-        
-
     }
-
-   
-
 
 }

@@ -7,9 +7,10 @@ public class die : MonoBehaviour
    
     void OnTriggerEnter()
     {
-        GameCtrl.instance.Thua = true;
-        GameAudio.instance.Play_die();
-        GameAudio.instance.Aus.mute = true;
+        GameCtrl.Instance.Thua = true;
+        AudioCtrl.Instance.Play_die();
+        AudioCtrl.Instance.Aus.mute = true;
 
+        
     }
 }

@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class CoinAnimation : MonoBehaviour
 {
-     void Update()
+    public float TocDoChuyenDong = 0.5f;
+    void Update()
     {
-        transform.Rotate(0, 0.5f, 0, Space.World);
+        
+        ChuyenDongTaiCho(TocDoChuyenDong);
     }
 
+    public void ChuyenDongTaiCho(float s)
+    {
+        transform.Rotate(0, s, 0, Space.World);
 
+    }
 }

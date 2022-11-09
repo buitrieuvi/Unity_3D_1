@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.27710006, g: 0.38492668, b: 0.53614175, a: 1}
+  m_IndirectSpecularColor: {r: 0.24516317, g: 0.34409785, b: 0.7023534, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -608,7 +608,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &87677419
 PrefabInstance:
@@ -751,7 +750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &137415525
 PrefabInstance:
@@ -832,7 +830,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &168910897 stripped
 GameObject:
@@ -856,7 +853,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &184585737
 PrefabInstance:
@@ -1088,7 +1084,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &285661224
 PrefabInstance:
@@ -1185,7 +1180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &296495081
 PrefabInstance:
@@ -1282,7 +1276,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &315299917
 PrefabInstance:
@@ -1363,7 +1356,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &364164597
 GameObject:
@@ -1430,7 +1422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &397791986 stripped
 GameObject:
@@ -1454,6 +1445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da288b1427ac0054395756b96f912e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TocDoChuyenDong: 0.5
 --- !u!1001 &407478054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1622,7 +1614,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &419160658 stripped
 GameObject:
@@ -1646,7 +1637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &431341982 stripped
 GameObject:
@@ -1670,7 +1660,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &436464780 stripped
 GameObject:
@@ -1694,7 +1683,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &463997872
 PrefabInstance:
@@ -1843,11 +1831,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6579836835396752607, guid: 9eb6e7293ee031f4ebdd120e0ce9a40d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.5
+      value: 6.1
       objectReference: {fileID: 0}
     - target: {fileID: 6579836835396752607, guid: 9eb6e7293ee031f4ebdd120e0ce9a40d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.12
+      value: -28.96
       objectReference: {fileID: 0}
     - target: {fileID: 6579836835396752607, guid: 9eb6e7293ee031f4ebdd120e0ce9a40d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1868,6 +1856,10 @@ PrefabInstance:
     - target: {fileID: 6579836835537544258, guid: 9eb6e7293ee031f4ebdd120e0ce9a40d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579836835828385646, guid: 9eb6e7293ee031f4ebdd120e0ce9a40d, type: 3}
+      propertyPath: level
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6579836835828385646, guid: 9eb6e7293ee031f4ebdd120e0ce9a40d, type: 3}
       propertyPath: thoigian
@@ -2290,7 +2282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &584811020
 PrefabInstance:
@@ -2752,7 +2743,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &744878128 stripped
 GameObject:
@@ -2776,7 +2766,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &758068242
 PrefabInstance:
@@ -2960,7 +2949,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &892027224
 PrefabInstance:
@@ -3100,7 +3088,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &941910658
 PrefabInstance:
@@ -3238,7 +3225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &1036378175
 PrefabInstance:
@@ -3319,7 +3305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &1055438876
 PrefabInstance:
@@ -3440,7 +3425,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &1098971509
 PrefabInstance:
@@ -3818,7 +3802,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &1160809752 stripped
 GameObject:
@@ -3842,7 +3825,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &1170726270 stripped
 GameObject:
@@ -3866,7 +3848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &1180930276
 PrefabInstance:
@@ -3963,7 +3944,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &1197029000 stripped
 GameObject:
@@ -3992,7 +3972,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &1214214595 stripped
 GameObject:
@@ -4016,7 +3995,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &1219084439 stripped
 GameObject:
@@ -4040,7 +4018,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &1223077286 stripped
 GameObject:
@@ -4064,7 +4041,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &1248043801
 PrefabInstance:
@@ -4291,7 +4267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &1417692379
 GameObject:
@@ -4360,7 +4335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!4 &1500358161 stripped
 Transform:
@@ -4592,7 +4566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &1583320544
 GameObject:
@@ -4727,7 +4700,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &1620001020 stripped
 GameObject:
@@ -4751,7 +4723,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &1624831817 stripped
 GameObject:
@@ -4775,7 +4746,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &1657085981
 PrefabInstance:
@@ -5114,7 +5084,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &1785425230 stripped
 GameObject:
@@ -5138,7 +5107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &1790527000
 PrefabInstance:
@@ -5507,7 +5475,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &1924347888 stripped
 GameObject:
@@ -5531,7 +5498,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &1926475216 stripped
 GameObject:
@@ -5555,7 +5521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &1931224653
 PrefabInstance:
@@ -5766,7 +5731,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &1973249162 stripped
 GameObject:
@@ -5790,7 +5754,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &1980039513 stripped
 GameObject:
@@ -5814,7 +5777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &1988998619 stripped
 GameObject:
@@ -5838,7 +5800,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &1993075282
 PrefabInstance:
@@ -6124,7 +6085,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1 &2051971247 stripped
 GameObject:
@@ -6148,7 +6108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &2068929272
 PrefabInstance:
@@ -6229,7 +6188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2
 --- !u!1001 &2083933603
 PrefabInstance:
@@ -6326,5 +6284,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TocDoChuyenDong: 0.5
   DiemCoin: 2

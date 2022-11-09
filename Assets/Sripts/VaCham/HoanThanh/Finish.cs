@@ -7,13 +7,11 @@ public class Finish : MonoBehaviour
 {
     void OnTriggerEnter()
     {
-        GameCtrl.instance.Thang = true;
-        GameAudio.instance.Play_win();
-        GameAudio.instance.Aus.mute = true;
-        PlayerPrefs.SetInt("Level", GameCtrl.instance.TongDiem());
-        if (PlayerPrefs.GetInt("Best") < PlayerPrefs.GetInt("Level"))
-            PlayerPrefs.SetInt("Best", PlayerPrefs.GetInt("Level"));
+        GameCtrl.Instance.Thang = true;
+        AudioCtrl.Instance.Play_win();
+        AudioCtrl.Instance.Aus.mute = true;
+        PlayerFest.Instance.PlayerFest_Setdiemcaonhat(GameCtrl.Instance.TongDiem());
+        PlayerFest.Instance.PlayerFest_Setdiemtemp(GameCtrl.Instance.TongDiem());
 
-        
     }
 }

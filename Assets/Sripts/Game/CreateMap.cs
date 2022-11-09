@@ -18,12 +18,5 @@ public class CreateMap : MonoBehaviour
             }
              
     }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
 }

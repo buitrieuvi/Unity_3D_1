@@ -16,10 +16,4 @@ public class Tele : MonoBehaviour
        pl.transform.position = t2.transform.position;
     }
 
-
-    //private void OnTriggerExit()
-    //{
-      
-    //    reTele = true;
-    //}
 }

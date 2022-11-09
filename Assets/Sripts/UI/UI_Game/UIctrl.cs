@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-public class UIctrl : MonoBehaviour
+public class UIctrl : Singleton<UIctrl>
 {
     [SerializeField]private GameObject Panel_gameover, Panel_menu, Panel_win, Panel_stop;
     [SerializeField] private GameObject time;
@@ -19,40 +19,35 @@ public class UIctrl : MonoBehaviour
     [SerializeField] private GameObject T_total_1;
     [SerializeField] private GameObject best;
     [SerializeField] private GameObject best_1;
-    private bool m_Stop = false;
+    [SerializeField] private GameObject die;
+    [SerializeField] private GameObject die_1;
 
+    private bool m_Stop = false;
     public static bool isTackingTime = false;
 
 
-    public static UIctrl instance = null;
-    public static UIctrl Instance
-    {
-        get
-        {
-            return instance;
-        }
-    }
-
     public GameObject Best { get => best; set => best = value; }
     public GameObject Best_1 { get => best_1; set => best_1 = value; }
-
-    public void Awake()
-    {
-        if (instance != null && instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-
-        instance = this;
-        //DontDestroyOnLoad(this.gameObject);
-    }
+    public GameObject Die { get => die; set => die = value; }
+    public GameObject Die_1 { get => die_1; set => die_1 = value; }
 
     void Start()
     {
         
         isTackingTime = false;
-        Best.GetComponent<Text>().text = " Best: " + PlayerPrefs.GetInt("Best");
-        Best_1.GetComponent<Text>().text = " Best: " + PlayerPrefs.GetInt("Best");
+        Best.GetComponent<Text>().text = " Best: " + PlayerPrefs.GetInt("diemcaonhat");
+        Best_1.GetComponent<Text>().text = " Best: " + PlayerPrefs.GetInt("diemcaonhat");
+        Die.GetComponent<Text>().text = " Die: " + PlayerPrefs.GetInt("solanchet");
+        Die_1.GetComponent<Text>().text = " Die: " + PlayerPrefs.GetInt("solanchet");
+
+    }
+
+    public void upSolanchet() 
+    {
+        GameCtrl.Instance.Solanchet++;
+        PlayerFest.Instance.PlayerFest_Setsolanchet(GameCtrl.Instance.Solanchet);
+        Die.GetComponent<Text>().text = " Die: " + PlayerPrefs.GetInt("solanchet");
+        Die_1.GetComponent<Text>().text = " Die: " + PlayerPrefs.GetInt("solanchet");
     }
 
     void Update()
@@ -60,22 +55,24 @@ public class UIctrl : MonoBehaviour
 
         if (isTackingTime == false && GameCtrl.Instance.Thoigian >= 0)
         {
-            if (!GameCtrl.instance.Thua && !GameCtrl.instance.Thang)
+            if (!GameCtrl.Instance.Thua && !GameCtrl.Instance.Thang)
                 StartCoroutine(eThoiGian());
         }
         diem();
 
-        if (GameCtrl.instance.Thua)
+        if (GameCtrl.Instance.Thua) 
+        {
             P_thua(true);
+        }
 
-        if (GameCtrl.instance.Thang)
+        if (GameCtrl.Instance.Thang)
             P_win(true);
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!m_Stop && !GameCtrl.instance.Thang && !GameCtrl.instance.Thua)
+            if (!m_Stop && !GameCtrl.Instance.Thang && !GameCtrl.Instance.Thua)
             {
-                GameAudio.instance.Aus.Pause();
+                AudioCtrl.Instance.Aus.Pause();
                 P_stop(true);
                 Time.timeScale = 0;
                 m_Stop = true;
@@ -83,7 +80,7 @@ public class UIctrl : MonoBehaviour
             }
             else
             {
-                GameAudio.instance.Aus.UnPause();
+                AudioCtrl.Instance.Aus.UnPause();
                 P_stop(false);
                 Time.timeScale = 1;
                 m_Stop = false;
@@ -93,9 +90,9 @@ public class UIctrl : MonoBehaviour
 
         }
 
-        if (GameCtrl.instance.Thoigian == 0)
+        if (GameCtrl.Instance.Thoigian == 0)
         {
-            GameCtrl.instance.Thua = true;
+            GameCtrl.Instance.Thua = true;
         }
     }
 
@@ -103,9 +100,9 @@ public class UIctrl : MonoBehaviour
     {
 
         isTackingTime = true;
-        GameCtrl.instance.Thoigian--;
-        time.GetComponent<Text>().text = " Time: " + GameCtrl.instance.Thoigian;
-        time_1.GetComponent<Text>().text = " Time: " + GameCtrl.instance.Thoigian;
+        GameCtrl.Instance.Thoigian--;
+        time.GetComponent<Text>().text = " Time: " + GameCtrl.Instance.Thoigian;
+        time_1.GetComponent<Text>().text = " Time: " + GameCtrl.Instance.Thoigian;
         yield return new WaitForSeconds(1);
         isTackingTime = false;
 
@@ -113,13 +110,13 @@ public class UIctrl : MonoBehaviour
 
     private void diem()
     {
-        score.GetComponent<Text>().text = " Score: " + GameCtrl.instance.Diem;
-        score_1.GetComponent<Text>().text = " Score: " + GameCtrl.instance.Diem;
+        score.GetComponent<Text>().text = " Score: " + GameCtrl.Instance.Diem;
+        score_1.GetComponent<Text>().text = " Score: " + GameCtrl.Instance.Diem;
     }
     public void restbest()
     {
-        Best.GetComponent<Text>().text = " Best: "  + GameCtrl.instance.Diemcaonhat;
-        Best_1.GetComponent<Text>().text = " Best: "  + GameCtrl.instance.Diemcaonhat;
+        Best.GetComponent<Text>().text = " Best: "  + GameCtrl.Instance.Diemcaonhat;
+        Best_1.GetComponent<Text>().text = " Best: "  + GameCtrl.Instance.Diemcaonhat;
     }
 
     private void P_thua(bool s)
@@ -137,24 +134,19 @@ public class UIctrl : MonoBehaviour
     {
         Panel_win.SetActive(s);
         endScore();
-     
-
     }
     public void QuitToMenu()
     {
-
-        PlayerPrefs.SetInt("Level", 0);
         SceneManager.LoadScene(0);
-
     }
 
     private void endScore()
     {
-        T_time.GetComponent<Text>().text = "Time: " + GameCtrl.instance.Thoigian;
-        T_time_1.GetComponent<Text>().text = "Time: " + GameCtrl.instance.Thoigian;
-        T_score.GetComponent<Text>().text = "Score: " + GameCtrl.instance.Diem;
-        T_score_1.GetComponent<Text>().text = "Score: " + GameCtrl.instance.Diem;
-        T_total.GetComponent<Text>().text = "Total Score: " + GameCtrl.instance.TongDiem();
-        T_total_1.GetComponent<Text>().text = "Total Score: " + GameCtrl.instance.TongDiem();
+        T_time.GetComponent<Text>().text = "Time: " + GameCtrl.Instance.Thoigian;
+        T_time_1.GetComponent<Text>().text = "Time: " + GameCtrl.Instance.Thoigian;
+        T_score.GetComponent<Text>().text = "Score: " + GameCtrl.Instance.Diem;
+        T_score_1.GetComponent<Text>().text = "Score: " + GameCtrl.Instance.Diem;
+        T_total.GetComponent<Text>().text = "Total Score: " + GameCtrl.Instance.TongDiem();
+        T_total_1.GetComponent<Text>().text = "Total Score: " + GameCtrl.Instance.TongDiem();
     }
 }

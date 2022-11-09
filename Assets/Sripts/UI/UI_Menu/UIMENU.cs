@@ -7,16 +7,15 @@ using UnityEngine.UIElements;
 public class UIMENU : MonoBehaviour
 {
 
-    public GameObject htp;
-    public Button s,q,h,r,ab;
+    public GameObject htp,ls;
+    bool hitory = false;
+    public Button s,q,h,r,ab,htr;
     public VisualElement g,l;
-    //public Label t;
 
     void Start()
     {
-
-        PlayerPrefs.SetInt("Level", 0);
-        PlayerPrefs.SetInt("Diem", 0);
+        PlayerFest.Instance.PlayerFest_Setdiemtemp(0);
+        PlayerFest.Instance.PlayerFest_Setsolanchet(0);
         var root = GetComponent<UIDocument>().rootVisualElement;
 
         s = root.Q<Button>("start");
@@ -24,6 +23,8 @@ public class UIMENU : MonoBehaviour
         ab = root.Q<Button>("about");
         h = root.Q<Button>("howtoplay");
         r = root.Q<Button>("rs");
+        htr = root.Q<Button>("ls");
+
 
 
         g = root.Q<VisualElement>("game-panel");
@@ -34,12 +35,13 @@ public class UIMENU : MonoBehaviour
         q.clicked += quitgamepress;
         h.clicked += HtP;
         ab.clicked += aboutpress;
-        r.text = "Reset Best: " + PlayerPrefs.GetInt("Best");
+        r.text = "Reset Best: " + PlayerPrefs.GetInt("diemcaonhat");
         r.clicked += rs;
+        htr.clicked += Ls_on;
 
 
     }
-
+    
     private void startgamepress() 
     {
         
@@ -51,23 +53,31 @@ public class UIMENU : MonoBehaviour
     }
     private void aboutpress()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(7);
     }
     private void howtoplaypress()
     {
         g.style.width  = 900;
-        //g.style.height = 900;
         l.style.visibility = Visibility.Hidden;
     }
    
     void Update()
     {
         RenderSettings.skybox.SetFloat("_Rotation", Time.time * 2f);
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (hitory)
+            {
+                hitory = false;
+                ls.SetActive(hitory);
+            }
+        }
     }
     private void rs() 
     {
-        PlayerPrefs.SetInt("Best", 0);
-        r.text = "Reset Best: " + PlayerPrefs.GetInt("Best");
+        PlayerFest.Instance.PlayerFest_Resetdiemcaonhat();
+        r.text = "Reset Best: " + PlayerPrefs.GetInt("diemcaonhat");
     }
     private void HtP()
     {
@@ -75,7 +85,15 @@ public class UIMENU : MonoBehaviour
         StartCoroutine(n());
         
     }
-   
+    private void Ls_on()
+    {
+        if (hitory == false)
+        {
+            hitory = true;
+            ls.SetActive(hitory);
+        }
+    }
+
     IEnumerator n()
     {
         yield return new WaitForSeconds(3);

@@ -11,7 +11,7 @@ public class UiCtrl : MonoBehaviour
 
     void Start()
     {
-        Panel_best.GetComponent<Text>().text =" Reset Best: "+ PlayerPrefs.GetInt("Best").ToString();
+        Panel_best.GetComponent<Text>().text =" Reset Best: "+ PlayerPrefs.GetInt("diemcaonhat").ToString();
     }
     public void QuitApp()
     {
@@ -22,7 +22,7 @@ public class UiCtrl : MonoBehaviour
     public void Run()
     {
 
-        GameCtrl.instance.cam(false,false,true);
+        CameraCtrl.Instance.cam(false,false,true);
         
     }
     

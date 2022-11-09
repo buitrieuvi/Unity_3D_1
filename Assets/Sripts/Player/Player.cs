@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameCtrl.instance.Thang || GameCtrl.instance.Thua) 
+        if (GameCtrl.Instance.Thang || GameCtrl.Instance.Thua) 
         {
             Destroy(gameObject);
         }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2429347268461030572}
   - component: {fileID: 2429347268461030573}
   - component: {fileID: 2429347268461030577}
+  - component: {fileID: 3576988320175029559}
   m_Layer: 0
   m_Name: VND5000
   m_TagString: Untagged
@@ -117,8 +118,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec6cd3c075ce244791f31d101cd9213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DiemCoin: 1
+--- !u!114 &3576988320175029559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2429347268461030570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da288b1427ac0054395756b96f912e4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   TocDoChuyenDong: 0.5
-  DiemCoin: 5
 --- !u!1 &2429347269347974926
 GameObject:
   m_ObjectHideFlags: 0
